@@ -25,5 +25,8 @@
   "homepage": "https://github.com/swssr/bftservices#readme",
   "devDependencies": {
     "parcel-bundler": "^1.12.4"
+  },
+  "dependencies": {
+    "smooth-scrollbar": "^8.5.2"
   }
 }
