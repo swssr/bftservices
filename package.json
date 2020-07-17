@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "@types/aos": "^3.0.3",
+    "aos": "^2.3.4",
     "smooth-scrollbar": "^8.5.2"
   }
 }
