@@ -69,6 +69,9 @@ p,
   opacity: 0.67;
   line-height: 180%;
 }
+.body-text{
+  max-width: 50ch;
+}
 .pre-head,
 .section__head {
   opacity: 0.86;
@@ -96,13 +99,23 @@ p,
   opacity: 0.76;
   max-width: 35vw;
 }
+.link{
+  color: var(--color-dark);
+
+}
+.link--primary{
+  background-color: rgba(0, 0, 0, 0.4);
+  color: var(--color-light) !important;
+  padding: .5rem 1rem;
+  border-radius: var(--border-radius);
+}
 .container {
   position: relative;
   height: max-content;
   padding: 8rem;
   margin: 0 auto;
   max-width: 1366px;
-  overflow-x: hidden;
+  background:transparent !important;
 }
 .container:not(.container:last-child) {
   margin-bottom: 4rem;
@@ -130,16 +143,18 @@ p,
   display: block;
   width: 100%;
   height: min-content;
-  background-color: var(--color-dark);
+  background-color: var(--color-dark) !important;
   box-shadow: 0 0 40px var(--color-dark);
   color: var(--color-light);
   margin: 6rem auto !important;
-  padding: 5rem 6rem ;
+  padding: 5rem 6rem;
+  z-index: 10 !important;
 }
 .btn svg {
   stroke: var(--color-light);
 }
 .container--list {
+  margin: 4rem 0;
   display: block !important;
 }
 .container__body {
@@ -197,9 +212,10 @@ p,
 }
 .section-image {
   height: 500px;
-  background-color: var(--color-accent);
+  /* background-color: var(--color-accent); */
   border-radius: var(--border-radius);
   object-fit: contain;
+  z-index: 2;
 }
 .btn__icon{
   display: grid;
@@ -287,16 +303,47 @@ form {
     flex-direction: row;
     gap: 1rem;
   }
+  .container--alt{
+    flex-direction: row-reverse;
+  }
   .container__body {
     display: block;
+    z-index: 2;
+  }
+  .container__body::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    background-color: var(--color-light);
+    width: 100vw;
+    height: 80vh;
+    margin-top: -6rem;
+    margin-left: -18rem;
+    border-radius: var(--border-radius);
+    z-index: -2;
+  }
+  .container--alt .container__body::after{
+    display: none;
+  }
+  .container--alt::before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: calc(100vw - 4rem * 2);
+    left: 4rem;
+    background-color: var(--color-light);
+    margin-top: -6rem;
+    height: 140%;
+    border-radius: var(--border-radius);
+  }
+  .container--alt .section-image{
+    background-color: #fff;
   }
   .container--primary {
     display: block;
     width: 70vw;
     margin: auto;
     border-radius: var(--border-radius);
-  }
-  .container--footer {
   }
   .footer__links {
     grid-template-columns: 1fr 1fr;
@@ -317,5 +364,6 @@ form {
     min-width: 360px;
     width: 400px;
     height: 450px;
+    z-index: 3;
   }
 }

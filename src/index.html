@@ -5,18 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BFTService | Social Media Marketing</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="bgpattern.css">    
     <link rel="stylesheet" href="style.css">    
 </head>
 <body>
+    <div class="wrapper">
     <span id="header"></span>
     <nav class="nav nav--top">
         <a href="#" class="link link--brand"><strong>bft</strong>services</a>
         <ul class="flex nav__links">
-            <li>About</li>
-            <li>Vision</li>
-            <li>Services</li>
-            <li>Vision</li>
-            <li>Contact</li>
+            <li><a class="link" href="#about">About</a></li>
+            <li><a class="link" href="#services">Services</a></li>
+            <li><a class="link" href="#vision">Vision</a></li>
+            <li><a class="link link--primary" href="#contact">Contact</a></li>
         </ul>
     </nav>
     <header class="container container--header">
@@ -33,7 +34,7 @@
     </section>
     <img src="influence.svg" alt="header image goes here" class="img section-image img--header">
     </header>
-    <div class="container">
+    <div id="about" class="container">
         <img src="content.svg" alt="some image" class="img section-image">
         <div class="container container__body">
         <h4 class="section__head">About Us</h4>
@@ -42,7 +43,7 @@
             <button class="btn btn--link">continue reading</button>
         </div>
     </div>
-    <div class="container container--list">
+    <div id="services" class="container container--list">
         <h4 class="section__head">Our Services</h4>
         <ul class="flex flex--fullwidth card-list">
             <li class="card">
@@ -74,7 +75,7 @@
             </li>
         </ul>
     </div>
-    <div class="container">
+    <div id="vision" class="container container--alt">
         <img class="img section-image" src="seasons.svg" alt="some image">
         <section class="container__body">
         <div class="pre-head">Our Vision</div>
@@ -110,9 +111,10 @@
         </ul>
         <div class="footer__body">
             <h3 class="head">BFTServices</h3>
-            <p class="body--text">BFT SERVICES began in 2020 to  help educate  sales staff and business owners on the strategic sales methods and marketing of products via the internet, it then grew to managing and developing content for business that have been around for years and have no social media presence.</p>
+            <p class="body-text">BFT SERVICES began in 2020 to  help educate  sales staff and business owners on the strategic sales methods and marketing of products via the internet, it then grew to managing and developing content for business that have been around for years and have no social media presence.</p>
         </div>
     </footer>
+    </div>
     <script src="index.js"></script>
 </body>
 </html>
