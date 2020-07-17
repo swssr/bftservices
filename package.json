@@ -1,0 +1,29 @@
+{
+  "name": "bftservices",
+  "version": "0.0.1",
+  "description": "Landing page for social media marketing company",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel ./src/index.html",
+    "build": "parcel build ./src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swssr/bftservices.git"
+  },
+  "keywords": [
+    "bftservice",
+    "social",
+    "landing",
+    "page"
+  ],
+  "author": "swssr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/swssr/bftservices/issues"
+  },
+  "homepage": "https://github.com/swssr/bftservices#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}
