@@ -28,7 +28,7 @@ body {
   --border-radius: 17px;
 
   --color-dark: #1d3557;
-  --color-light: #f1faee;
+  --color-light: hsl(185, 55%, 93%);
   --color-mid: #a8dadc;
   --color-accent: rgb(230, 57, 70);
 }
@@ -147,7 +147,7 @@ p,
 .img--header{
   margin-right: 6rem;
   background: transparent !important;
-  transform: scale(2);
+  transform: scale(1.5);
   z-index: -1;
 }
 .container--primary {
