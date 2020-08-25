@@ -32,6 +32,10 @@ body {
   --color-mid: #a8dadc;
   --color-accent: rgb(230, 57, 70);
 }
+::selection {
+  color: var(--color-dark);
+  background-color: var(--color-accent);
+}
 
 /* 3. TYPOGRAPHY */
 html {
@@ -178,13 +182,15 @@ p,
   display: flex;
   gap: 2rem;
   border-radius: inherit;
+  z-index: 2;
 }
 .inner--row {
   position: relative;
   display: flex;
   flex-direction: column;
   margin-top: 4rem;
-  gap: 16px;
+  padding: 0 2rem;
+  gap: 0;
 }
 .inner--row::before {
   content: "";
@@ -207,17 +213,22 @@ p,
 .container--header {
   display: flex;
   align-items: end;
-  padding: 6rem;
   overflow: hidden;
-  margin-bottom: 6rem;
   padding: 4rem 2rem;
+  margin-bottom: 10rem;
 }
 .hero {
-  max-width: 476px;
+  max-width: 40vw;
+  /* max-width: 476px; */
+  z-index: 2;
+}
+.hero__head {
+  width: 15ch;
 }
 .hero__body {
-  width: 90%;
+  width: 80%;
   margin-bottom: 4rem;
+  z-index: 2;
 }
 .img--header {
   background: transparent !important;
@@ -372,7 +383,7 @@ a {
   text-transform: capitalize;
   cursor: pointer;
   display: flex;
-  gap: 8px;
+  gap: 1rem;
 }
 .btn--primary {
   display: flex;
@@ -389,6 +400,10 @@ a {
 }
 .link {
   color: var(--color-dark);
+}
+.btn__text {
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 /* 6. FORMS & INPUTS */
@@ -427,14 +442,16 @@ a,
 button {
   transition: 400ms all ease-out;
 }
-a {
+a,
+button {
   position: relative;
   padding: 4px;
   overflow: hidden;
   border-radius: 4px;
   z-index: 1;
 }
-a::before {
+a::before,
+button::before {
   content: "";
   position: absolute;
   left: 0;
@@ -446,7 +463,8 @@ a::before {
   border-radius: 50%;
   z-index: -1;
 }
-a:hover::before {
+a:hover::before,
+button:hover::before {
   transform: scale(10000%);
 }
 
