@@ -38,8 +38,10 @@ body {
 }
 
 /* 3. TYPOGRAPHY */
-html {
+* {
   font-family: "Poppins", sans-serif;
+}
+html {
   font-size: clamp(var(--minFontSize), var(--scaler), var(--maxFontSize));
   font-size: 16px;
   color: var(--color-dark);
@@ -121,15 +123,6 @@ p,
 }
 .link {
   color: var(--color-dark);
-}
-.link--brand {
-  font-family: "Poppins";
-}
-.link--primary {
-  background-color: rgba(0, 0, 0, 0.4);
-  color: var(--color-light) !important;
-  padding: 0.5rem 1rem;
-  border-radius: var(--border-radius);
 }
 .wrapper {
   height: 100vh;
@@ -351,6 +344,10 @@ p,
   display: flex;
   gap: 4rem;
   height: min-content;
+  z-index: 2;
+}
+.footer__body {
+  z-index: 2;
 }
 .footer__links .list > * {
   display: block;
@@ -400,6 +397,7 @@ a {
 }
 .link {
   color: var(--color-dark);
+  font-size: 1rem;
 }
 .btn__text {
   font-size: 1rem;
