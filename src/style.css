@@ -155,9 +155,7 @@ p,
   margin-bottom: 2rem;
   z-index: 1;
 }
-.container--alt * {
-  /* outline: 1px solid; */
-}
+
 .container--alt .inner {
   display: flex;
   justify-content: space-between;
@@ -248,8 +246,7 @@ p,
   padding-top: 1rem;
   padding-bottom: 1rem;
   transform: scale(1);
-  margin-bottom: 10vh;
-  /* z-index: 20; */
+  margin-bottom: 30vh;
 }
 .shadow::before,
 .container--contrast::before {
@@ -464,20 +461,22 @@ form {
   font-weight: 500;
 }
 /* (N-3). INTERACTIONS */
-a,
-button {
-  transition: 400ms all ease-out;
+.cubes__item,
+.link,
+.btn {
+  transition: 400ms transform ease-out;
+  will-change: auto;
 }
-a,
-button {
+.cube,
+.link,
+.btn {
   position: relative;
-  padding: 4px;
   overflow: hidden;
-  border-radius: 4px;
   z-index: 1;
 }
-a::before,
-button::before {
+.cube::before,
+.link::before,
+.btn::before {
   content: "";
   position: absolute;
   left: 0;
@@ -485,13 +484,24 @@ button::before {
   background-color: rgba(0, 0, 0, 0.05);
   width: 4px;
   height: 4px;
-  transition: 400ms ease-out;
+  transition: inherit;
   border-radius: 50%;
-  z-index: -1;
+  z-index: -2;
 }
-a:hover::before,
-button:hover::before {
+.cube:hover::before,
+.link:hover::before,
+.btn:hover::before {
   transform: scale(20000%);
+}
+.section-image {
+  transition: 10s all ease;
+}
+.section-image:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+.img--header:hover {
+  transform: scale(1.8);
 }
 
 /* (N-2). ABSTRACT */
