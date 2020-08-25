@@ -59,6 +59,7 @@ h1 {
 h2 {
   font-size: 36px;
   margin-bottom: 1.5rem;
+  max-width: 20ch;
 }
 h4 {
   margin-bottom: var(--type-margin);
