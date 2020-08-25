@@ -1,5 +1,4 @@
 import ScrollBar from "smooth-scrollbar";
-import AOS from "aos";
 
 import "./bgpattern.css";
 import "./style.css";
