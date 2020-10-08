@@ -239,6 +239,8 @@ p,
 .hero {
   max-width: 40vw;
   /* max-width: 476px; */
+  height: max-content;
+  align-self: flex-end;
   z-index: 2;
 }
 .hero__head {
