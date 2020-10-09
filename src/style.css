@@ -240,7 +240,8 @@ p,
   max-width: 40vw;
   /* max-width: 476px; */
   height: max-content;
-  align-self: flex-end;
+  align-self: center;
+  margin-top: 10vh;
   z-index: 2;
 }
 .hero__head {
