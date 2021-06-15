@@ -1,0 +1,7 @@
+@media (max-width: 420px) {
+  /* Mobile code here */
+  .nav--top {
+    background-color: beige;
+    height: 30px;
+  }
+}
